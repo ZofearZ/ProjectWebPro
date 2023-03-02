@@ -31,6 +31,20 @@ export default {
         changeemail(event) {
             console.log(event)
             this.Email = event.target.value
+        },
+        register() {
+            if (
+                this.Username !== '' &&
+                this.Password !== '' &&
+                this.Firstname !== '' &&
+                this.Lastname !== '' &&
+                this.Email !== ''
+            ) {
+                console.log(this.Username, this.Password, this.Firstname, this.Lastname, this.Email)
+            } else {
+                alert('กรุณากรอกข้อมูล')
+            }
+            console.log('registering')
         }
     }
 }
@@ -50,7 +64,7 @@ export default {
         <InputFormat @sentvalue="changeemail" type="Email" />
         {{ this.Email }}
         <div class="buttons">
-            <button class="button is-primary is-rounded">Sign UP</button>
+            <button @click="register" class="button is-primary is-rounded">Sign UP</button>
         </div>
     </div>
 </template>

@@ -1,19 +1,23 @@
 <script>
 export default {
     props: {
-        type: String
+        type: String,
+        help: String,
+        help_color: String
     },
-    computed: {
-        placeholder_text() {
-            return this.type
-        },
-        id_text() {
-            return this.type
+    data() {
+        return {
+            color: ''
         }
     },
     methods: {
         text_change(event) {
             this.$emit('sentvalue', event)
+        }
+    },
+    conputed: {
+        colorchange() {
+            this.color = this.help_color
         }
     }
 }
@@ -25,6 +29,7 @@ export default {
         <div class="control">
             <input class="input" type="text" :placeholder="type" :id="type" @input="text_change" />
         </div>
+        <p class="help" :class="{ color }">{{ help }}{{ color }}</p>
     </div>
 </template>
 

@@ -6,7 +6,7 @@
                     <img src="./icons/Bangkok.jpg" alt="bangkokicon" />
                 </RouterLink>
                 <RouterLink to="/">
-                    <a class="home_name navbar-item"> <strong>Bamgkok Place</strong></a>
+                    <a class="home_name navbar-item"> <strong>Bangkok Place</strong></a>
                 </RouterLink>
                 <a class="favorite navbar-item">Favorite</a>
             </div>
@@ -36,7 +36,7 @@
 }
 .favorite {
     font-size: 1.3rem;
-    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; */
 }
 img {
     width: 80px;
