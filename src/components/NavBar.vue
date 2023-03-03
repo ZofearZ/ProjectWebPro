@@ -1,3 +1,13 @@
+<script>
+export default {
+    methods: {
+        alert_check() {
+            alert('logput')
+        }
+    }
+}
+</script>
+
 <template>
     <nav class="navbar is-white" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
@@ -20,7 +30,7 @@
                             <RouterLink to="/register" class="navbar-item"> Register </RouterLink>
                             <RouterLink to="/login" class="navbar-item"> Login </RouterLink>
                             <hr class="navbar-divider" />
-                            <a class="navbar-item"> Logout </a>
+                            <a @click="alert_check" class="navbar-item"> Logout </a>
                         </div>
                     </div>
                 </div>
