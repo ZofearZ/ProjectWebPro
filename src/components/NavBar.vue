@@ -1,5 +1,7 @@
 <script>
+import { RouterLink } from 'vue-router'
 export default {
+    componnet: { RouterLink },
     methods: {
         alert_check() {
             alert('logput')
