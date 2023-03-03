@@ -13,15 +13,15 @@
 
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <div class="buttons">
-                        <RouterLink to="/register">
-                            <a class="button is-black">
-                                <strong>Sign up</strong>
-                            </a>
-                        </RouterLink>
-                        <RouterLink to="/login">
-                            <a class="button is-black"><strong>Log In</strong></a>
-                        </RouterLink>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <p class="navbar-link">Account</p>
+                        <div class="navbar-dropdown is-boxed">
+                            <RouterLink to="/profile" class="navbar-item"> Profile </RouterLink>
+                            <RouterLink to="/register" class="navbar-item"> Register </RouterLink>
+                            <RouterLink to="/login" class="navbar-item"> Login </RouterLink>
+                            <hr class="navbar-divider" />
+                            <a class="navbar-item"> Logout </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -37,6 +37,9 @@
 .favorite {
     font-size: 1.3rem;
     /* margin-top: 0.5rem; */
+}
+p {
+    font-size: 1.5rem;
 }
 img {
     width: 80px;

@@ -65,7 +65,10 @@ export default {
                 ></textarea
                 ><br />
                 <textarea
-                    class="textarea has-fixed-size is-info"
+                    v-for="comment in place[place_id].comment"
+                    :key="comment"
+                    :value="'Name: ' + comment"
+                    class="textarea has-fixed-size is-info comment"
                     placeholder="Comment ..."
                     readonly
                     rows="2"
@@ -90,5 +93,8 @@ img {
 }
 .field {
     margin-top: 1.5rem;
+}
+.comment {
+    margin-top: 1rem;
 }
 </style>
