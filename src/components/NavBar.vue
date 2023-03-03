@@ -5,6 +5,8 @@ export default {
     methods: {
         alert_check() {
             alert('logput')
+            localStorage.removeItem('user')
+            this.$router.go()
         }
     }
 }

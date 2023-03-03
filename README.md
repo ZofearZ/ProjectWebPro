@@ -33,3 +33,12 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## ควรเพิ่ม
+
+```sh
+google map
+search
+like
+sort
+```

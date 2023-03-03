@@ -3,12 +3,13 @@ import InputFormat from '../components/InputFormat.vue'
 export default {
     components: { InputFormat },
     data() {
+        const user = JSON.parse(localStorage.getItem('user')) ?? {}
         return {
-            Username: '',
-            Password: '',
-            Firstname: '',
-            Lastname: '',
-            Email: ''
+            Username: user?.user_name,
+            Password: user?.user_password,
+            Firstname: user?.first_name,
+            Lastname: user?.last_name,
+            Email: user?.email
         }
     },
     methods: {
@@ -60,15 +61,15 @@ export default {
 <template>
     <div class="container">
         <h1>Profile</h1>
-        <InputFormat @sentvalue="changeusername" type="Username" />
+        <InputFormat @sentvalue="changeusername" type="Username" :value="Username" />
         {{ this.Username }}
-        <InputFormat @sentvalue="changepassword" type="Pasword" />
+        <InputFormat @sentvalue="changepassword" type="Pasword" :value="Password" />
         {{ this.Password }}
-        <InputFormat @sentvalue="changefirstname" type="FirstName" />
+        <InputFormat @sentvalue="changefirstname" type="FirstName" :value="Firstname" />
         {{ this.Firstname }}
-        <InputFormat @sentvalue="changelastname" type="LastName" />
+        <InputFormat @sentvalue="changelastname" type="LastName" :value="Lastname" />
         {{ this.Lastname }}
-        <InputFormat @sentvalue="changeemail" type="Email" />
+        <InputFormat @sentvalue="changeemail" type="Email" :value="Email" />
         {{ this.Email }}
         <div class="buttons">
             <button @click="deleteact" class="button is-primary is-rounded">Delete Account</button>

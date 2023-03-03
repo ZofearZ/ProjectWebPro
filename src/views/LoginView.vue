@@ -1,5 +1,6 @@
 <script>
 import InputFormat from '../components/InputFormat.vue'
+import { users } from '../assets/users'
 export default {
     components: { InputFormat },
     data() {
@@ -18,7 +19,16 @@ export default {
             this.Password = event.target.value
         },
         check() {
-            console.log('checking')
+            const foundUser = users.find((user) => {
+                return user.user_name === this.Username && user.user_password === this.Password
+            })
+            if (foundUser) {
+                localStorage.setItem('user', JSON.stringify(foundUser))
+                this.$router.push({ path: '/' })
+            } else {
+                alert('error')
+                console.log(foundUser)
+            }
         }
     }
 }

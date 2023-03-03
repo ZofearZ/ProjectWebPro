@@ -23,3 +23,8 @@ export default {
 </template>
 
 <style scoped></style>
+
+<!-- google map
+search
+like
+sort -->

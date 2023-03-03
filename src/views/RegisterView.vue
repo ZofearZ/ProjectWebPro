@@ -1,5 +1,6 @@
 <script>
 import InputFormat from '../components/InputFormat.vue'
+import { users } from '../assets/users'
 export default {
     components: { InputFormat },
     data() {

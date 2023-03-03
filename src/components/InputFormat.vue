@@ -3,7 +3,8 @@ export default {
     props: {
         type: String,
         help: String,
-        help_color: String
+        help_color: String,
+        value: String
     },
     data() {
         return {
@@ -27,7 +28,14 @@ export default {
     <div class="field">
         <label class="label">{{ type }}</label>
         <div class="control">
-            <input class="input" type="text" :placeholder="type" :id="type" @input="text_change" />
+            <input
+                class="input"
+                :value="value"
+                type="text"
+                :placeholder="type"
+                :id="type"
+                @input="text_change"
+            />
         </div>
         <p class="help" :class="{ color }">{{ help }}{{ color }}</p>
     </div>
